@@ -9,7 +9,7 @@ make a multitude of decisions based on past data.
  
 ## Visualizations 
 
-! [alt text] (https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/heat_map.PNG  "heat_map")
-! [alt text] (https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/store_map.PNG  "store_map")
-! [alt text] (https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/month_scatter.PNG  "month_scatter")
-! [alt text] (https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/year_rev.PNG  "year_rev")
+! [alt text](https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/heat_map.PNG  "heat_map")
+! [alt text](https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/store_map.PNG  "store_map")
+! [alt text](https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/month_scatter.PNG  "month_scatter")
+! [alt text](https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/year_rev.PNG  "year_rev")
