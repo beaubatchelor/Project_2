@@ -5,7 +5,7 @@ client = MongoClient('localhost', 27017)
 db = client.project_2
 collection = db.sales_data
 
-sales_csv = pd.read_csv('data/Sample_Data_Set_for_UCI_Project_2.csv')
+sales_csv = pd.read_csv('Sample_Data_Set_for_UCI_Project_2.csv')
 
 
 new_keys_list = []
