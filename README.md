@@ -4,7 +4,7 @@ three different visuals that will be updateable based on used input. We are doin
 make a multitude of decisions based on past data.
 
 ##Data snapshot:
-! [alt text] ("static/assets/images/data_snap.png")
+! [alt text] (https://github.com/beaubatchelor/Project_2/blob/master/static/assets/images/data_snap.PNG)
  
 ##Visualizations 
 ! [alt text] ("static/assets/images/heat_map.png")
