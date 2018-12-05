@@ -1,8 +1,9 @@
 import pandas as pd
 from pymongo import MongoClient
+from config import (mongo_name, mongo_pass)
 
-client = MongoClient('localhost', 27017)
-db = client.project_2
+client = MongoClient(f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
+db = client.heroku_6lctns1z
 collection = db.sales_data
 
 sales_csv = pd.read_csv('Sample_Data_Set_for_UCI_Project_2.csv')
