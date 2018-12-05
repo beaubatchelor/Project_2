@@ -8,8 +8,10 @@ mkl-fft==1.0.6
 mkl-random==1.0.1
 numpy==1.15.4
 pandas==0.23.4
+pymongo==3.7.2
 python-dateutil==2.7.5
 pytz==2018.7
 six==1.11.0
 Werkzeug==0.14.1
 wincertstore==0.2
+gunicorn==19.7.1
