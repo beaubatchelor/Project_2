@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from data.config import (mongo_name, mongo_pass)
 from flask_pymongo import PyMongo
 
+
 app = Flask(__name__)
 
 # mongo = PyMongo(app, uri = f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
@@ -23,6 +24,11 @@ def prod_by_city():
     return render_template("prod_by_city.html")
 @app.route("/table_s")
 def table():
+
+    return render_template("sai_page.html")
+
+@app.route("/data")
+def data():
 
     return render_template("sai_page.html")
 
