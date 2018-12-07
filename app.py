@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from config import (mongo_name, mongo_pass)
+from config import mongo_name, mongo_pass 
 from flask_pymongo import PyMongo
 
 
@@ -34,4 +34,4 @@ def data():
 
 
 if __name__ == "__main__":
-    app.run(debug=true)
+    app.run(debug=True)
