@@ -8,6 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/assets/css/styles.css" media="screen"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+    
 
     <title> Project 2 </title>
   </head>
@@ -28,7 +32,33 @@
                 <section>
                     
                     <p> SVG Visualization Goes here:</p><br><br><br><br><br>
-                    <div id ="visual"></div>
+                    <div id ="visual">
+        
+                          <div class="dropdown">
+                                <button id="productBtn" class="dropbtn btn btn-primary btn-lg">Select Product</button>
+                                <div class="dropdown-content">
+                                  <a href="#" onclick="generateMap('Accessories')">Accessories</a>
+                                  <a href="#" onclick="generateMap('City Skirts')">City Skirts</a>
+                                  <a href="#" onclick="generateMap('City Trousers')">City Trousers</a>
+                                  <a href="#" onclick="generateMap('Dresses')">Dresses</a>
+                                  <a href="#" onclick="generateMap('Jackets')">Jackets</a>
+                                  <a href="#" onclick="generateMap('Outer Wear')">Outer Wear</a>
+                                  <a href="#" onclick="generateMap('Over Coats')">Over Coats</a>
+                                  <a href="#" onclick="generateMap('Shirt Waist')">Shirt Waist</a>
+                                  <a href="#" onclick="generateMap('Sweat T-Shirts')">Sweat T-Shirts</a>
+                                  <a href="#" onclick="generateMap('Sweaters')">Sweaters</a>
+                                  <a href="#" onclick="generateMap('Trousers')">Trousers</a>
+                                </div>
+                              </div>
+
+
+
+
+
+
+
+
+                    </div>
                     <h><strong>Title of Visualization Here</strong></h><p>
                     Explanation of Visualization here. Nunc molestie arcu velit, tempus pellentesque turpis dapibus nec. Nulla mollis volutpat orci eu pulvinar. 
                     Maecenas feugiat pellentesque nisi, ac bibendum augue placerat sit amet. Pellentesque vitae mi vitae lorem 
@@ -71,5 +101,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="../static/js/geoMap.js"></script>
+    <script src="../static/js/data.js"></script>
+
   </body>
 </html>
