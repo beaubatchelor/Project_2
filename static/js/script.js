@@ -1,10 +1,9 @@
 
 function drawTable(city){
     document.querySelector('#cityBtn').innerHTML = city;
-} 
+}
 
-
-var data = 'data.js';
+var data = [data.js];
 
 var table = d3.select('#visual')
     .append('table')
