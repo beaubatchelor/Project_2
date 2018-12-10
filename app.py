@@ -23,12 +23,12 @@ def scatter_data():
     trace1 = {
            "x" : [0,1,2,3,4,5],
            "y" : [0,1,5,16,1,3],
-           mode: 'lines'
+           "mode": 'lines'
         }
     trace2 = {
            "x" : [0,1,2,3,4,5],
            "y" : [0,9,20,4,3,2],
-           mode: 'lines'
+           "mode": 'lines'
         }
     month_data = [trace1, trace2]
     return jsonify(month_data)
