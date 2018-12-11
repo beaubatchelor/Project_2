@@ -1,4 +1,4 @@
-{'city_list': [{'City': 'Los Angeles',
+var cityData = {'city_list': [{'City': 'Los Angeles',
   'Lines with Quantity': [{'Accessories': 7252,
     'City Skirts': 227,
     'City Trousers': 168,
