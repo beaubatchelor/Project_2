@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 const cityInfo = [
   {'City': 'Los Angeles',
-=======
-var cityData = {'city_list': [{'City': 'Los Angeles',
->>>>>>> 0ce8070ee74c7847b02c7e97a5a5e75fcc5f8d21
   'Lines with Quantity': [{'Accessories': 7252,
     'City Skirts': 227,
     'City Trousers': 168,
