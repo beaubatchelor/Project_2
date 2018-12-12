@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request 
 from flask_pymongo import PyMongo
-from congfig import (mongo_name, mongo_pass)
+from config import (mongo_name, mongo_pass)
 
 
 app = Flask(__name__)
