@@ -31,13 +31,30 @@
             
                 <section>
                     
-                    <p> SVG Visualization Goes here:</p><br><br><br><br><br>
+                    </div>        
+                    
+                        <select id='selected-item' onchange = "generateMap();">
+                            
+                            <option value="Accessories">Accessories</option>
+                            <option value="City_Skirts">City Skirts</option>
+                            <option value="City_Trousers">City Trousers</option>
+                            <option value="Dresses">Dresses</option>
+                            <option value="Jackets">Jackets</option>
+                            <option value="Outer_Wear">Outer Wear</option>
+                            <option value="Over_Coats">Over Coats</option>
+                            <option value="Shirt_Waist">Shirt Waist</option>
+                            <option value="Sweat_T-Shirts">Sweat T-Shirts</option>
+                            <option value="Sweaters">Sweaters</option>
+                            <option value="Trousers">Trousers</option>
+                        </select>
+
+                    </div>  
                     <div id ="lineChart"></div>
-                    <h1><strong>Title of Visualization Here</strong></h1><p>
-                    Explanation of Visualization here. Nunc molestie arcu velit, tempus pellentesque turpis dapibus nec. Nulla mollis volutpat orci eu pulvinar. 
-                    Maecenas feugiat pellentesque nisi, ac bibendum augue placerat sit amet. Pellentesque vitae mi vitae lorem 
-                    blandit aliquam. Morbi quis cursus metus. Aenean eget sapien at massa pulvinar pharetra nec a lorem. Mauris 
-                    sodales auctor libero et maximus.</p>
+                    <h1><strong>Line by month</strong></h1><p>
+                            This trend line chart displays the monthly sales revenue for all
+                             stores based on selected product line by year displayed in different colors.
+                              User can select any product line from the drop down menu and the chart will
+                               displays the sales revenue trends for the selected product line</p>
                 
                 </section>
 
@@ -50,7 +67,7 @@
                                         
                                         <h3 class="text-center">Buttons</h3>
                                         <a class="btn btn-primary btn-lg" href="/prod_by_city_m"  role="button">Product Revenue</a><br><br>
-                                        <a class="btn btn-primary btn-lg" href="/table_s"  role="button">Sai's Visual </a><br><br>
+                                        <a class="btn btn-primary btn-lg" href="/table_s"  role="button">Table by City</a><br><br>
                                         <a class="btn btn-primary btn-lg" href="/" role="button">Home</a><br><br>
                                     </section>
                                 </div>
