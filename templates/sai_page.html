@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/assets/css/styles.css" media="screen"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}" media="screen"> 
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
@@ -30,10 +30,10 @@
             
                 <section>
                     
-                    <p> SVG Visualization Goes here:</p><br><br><br><br><br>
-                    <div id ="visual">
+                    <p> Sales Revenue:</p><br><br><br><br><br>
+                    <div id ="table">
                             <div class="dropdown">
-                                        <button id="cityBtn" class="dropbtn btn btn-primary btn-lg">Select City</button>
+                                        <button id="cityBtn" type="submit" class="dropbtn btn btn-primary btn-lg">Select City</button>
                                         <div class="dropdown-content">
                                           <a href="#" onclick="drawTable('Austin')">Austin</a>
                                           <a href="#" onclick="drawTable('Boston')">Boston</a>
@@ -41,7 +41,7 @@
                                           <a href="#" onclick="drawTable('Colorado Springs')">Colorado Springs</a>
                                           <a href="#" onclick="drawTable('Dallas')">Dallas</a>
                                           <a href="#" onclick="drawTable('Houston')">Houston</a>
-                                          <a href="#" onclick="drawTable('Los Angele')">Los Angeles</a>
+                                          <a href="#" onclick="drawTable('Los Angeles')">Los Angeles</a>
                                           <a href="#" onclick="drawTable('Miami')">Miami</a>
                                           <a href="#" onclick="drawTable('New York')">New York</a>
                                           <a href="#" onclick="drawTable('San Francisco')">San Francisco</a>
@@ -54,10 +54,9 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-12">
                                     <table border="1" id="html5logo" class="table table-striped">
-                                        <caption style="caption-side:bottom;">Highest/Lowest</caption>
-                                        <tbody>
-                                            <tr></tr>
-                                                <th></th>
+                                        <thead>
+                                            <tr>
+                                                <th>Accessories</th>
                                                 <th>City Skirts</th>
                                                 <th>City Trousers</th>
                                                 <th>Dresses</th>
@@ -70,20 +69,16 @@
                                                 <th>Trousers</th>
                                                 <th>Outerwear</th>
                                             </tr>
-                                            <tr>
-                                                <th>Quanity</th>
-                                                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Sales Revenue</th>
-                                                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                        </thead>
+                                            <tbody>
+                                            <tr id="salesRevenue">
+                                                
                                             </tr> 
-                                            <tr>
-                                                <th>Margin</th>
-                                                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                                </tr>                                            
+                                            <tr id="Margin">
+
+                                            </tr>                                            
                                         </tbody>
-                                    </table>
+                                    </table> 
                                 </div>
                                 <div class="col-md-7 col-sm-12">
                                     <div id="canvas_container"></div>
@@ -137,6 +132,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="../static/assets/js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

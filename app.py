@@ -4,13 +4,14 @@ from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from config import (mongo_name, mongo_pass)
 
-client = MongoClient(f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
-db = client.heroku_6lctns1z
-collection = db.sales_data 
+# client = MongoClient(f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
+# collection = db.sales_data 
 
 app = Flask(__name__)
 
-mongo = PyMongo(app, uri = f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
+# conn = f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z'
+# client = pymongo.MongoClient(conn)
+# db = client.heroku_6lctns1z
 
 @app.route("/")
 def index():
@@ -40,30 +41,20 @@ def scatter_data():
 
 @app.route("/prod_by_city_m")
 def prod_by_city():
-
+    
     return render_template("prod_by_city.html")
-@app.route("/table_s")
-def table():
 
+@app.route("/table_s")
+def sai():
+    
     return render_template("sai_page.html")
 
 @app.route("/data")
 def data():
-    city_high =
-    highest_sales =
-    highest_margin = 
-    city_low =
-    lowest_sales = 
-    lowest_margin = 
 
     return render_template(
         "sai_page.html",
-        city_high = city_high,
-        highest_sales = highest_sales,
-        highest_margin = highest_margin,
-        city_low = city_low,
-        lowest_sales = lowest_sales,
-        lowest_margin = lowest_margin
+
     )
 
 

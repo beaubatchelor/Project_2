@@ -1,25 +1,53 @@
+// var tableData = cityData;
 
-function drawTable(city){
-    document.querySelector('#cityBtn').innerHTML = city;
+var salesRevenue = d3.select("#salesRevenue");
+var margin = d3.select("#Margin");
+
+function drawTable(city) {
+  salesRevenue.html("");
+  margin.html("");
+console.log('hi')
+  cityInfo.forEach((dataRow) => {
+    if(dataRow.City === city){
+      let values = [];
+      for(let info in dataRow["Lines with Sales"][0]){
+        values.push(dataRow["Lines with Sales"][0][info]);
+      }
+      console.log(values)
+      salesRevenue.selectAll('td')
+        .data(values)
+        .enter()
+        .append('td')
+        .text(function (d) {
+          return d
+        })
+    }});
+
+    // var row = tbody.append("tr");
+
+  //   Object.values(dataRow).forEach((val) => {
+  //     var cell = row.append("td");
+  //       cell.text(val);
+  //     }
+  //   );
+  // });
 }
 
-var data = [data.js];
+// function handleClick() {
 
-var table = d3.select('#visual')
-    .append('table')
-    .classed('table', true);
+//   d3.event.preventDefault();
 
-var thead = table.append('thead').append('tr');
+//   var date = d3.select("#datetime").property("value");
+//   let filteredData = tableData;
 
-var body = table.append('tbody');
+//   if (city) {
 
-var reload = function() {
-    console.log("reload() called.");
-    redraw();
-};
+//     filteredData = filteredData.filter(row => row.datetime === date);
+//   }
 
-var redraw = function () {
-    console.log("redraw() called.");
-};
+//   buildTable(filteredData);
+// }
 
-reload();
+// d3.selectAll("#filter-btn").on("click", handleClick);
+
+// buildTable(tableData);

@@ -1,4 +1,5 @@
-{'city_list': [{'City': 'Los Angeles',
+const cityInfo = [
+  {'City': 'Los Angeles',
   'Lines with Quantity': [{'Accessories': 7252,
     'City Skirts': 227,
     'City Trousers': 168,
@@ -404,4 +405,4 @@
     'Sweaters': 168266.6,
     'Sweat-T-Shirts': 762884.2,
     'Trousers': 45965.5,
-    'Outerwear': 87542.9}]}]}
+    'Outerwear': 87542.9}]}]
