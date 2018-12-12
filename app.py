@@ -1,28 +1,16 @@
-from flask import Flask, render_template, jsonify
-from config import mongo_name, mongo_pass 
-from flask_pymongo import PyMongo
-<<<<<<< HEAD
+from flask import Flask, render_template, jsonify, request 
+from flask_pymongo import PyMongo 
 from pymongo import MongoClient
-=======
->>>>>>> 0ce8070ee74c7847b02c7e97a5a5e75fcc5f8d21
-from config import (mongo_name, mongo_pass)
+from data.config import (mongo_name, mongo_pass)
 
-# client = MongoClient(f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
-# collection = db.sales_data 
 
 app = Flask(__name__)
 
-<<<<<<< HEAD
-# conn = f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z'
-# client = pymongo.MongoClient(conn)
-# db = client.heroku_6lctns1z
-=======
-mongo = PyMongo(app, uri = f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z')
->>>>>>> 0ce8070ee74c7847b02c7e97a5a5e75fcc5f8d21
+mongo = PyMongo(app, uri = f'mongodb://{mongo_name}:{mongo_pass}@ds249818.mlab.com:49818/heroku_6lctns1z') 
 
 @app.route("/")
 def index():
-    #sales = mongo.heroku_6lctns1z.sales_data.find({},{'_id':False})
+    # sales = mongo.heroku_6lctns1z.sales_data.find({},{'_id':False})
    # """Return the homepage."""
     return render_template("index.html")
 
@@ -33,7 +21,7 @@ def scatter():
 
 @app.route("/scatter_data")
 def scatter_data():
-    user_input = 'Accessories'.replace(" ", "_")
+    user_input = "Accessories".replace(" ", "_")
     line = mongo.db.line_graph.find_one({ f"{user_input}" : { "$exists" : True}}, {'_id': False})
     line_data = line[user_input]
     year2014 = line_data["2014"] 
@@ -44,21 +32,17 @@ def scatter_data():
 
 @app.route("/prod_by_city_m")
 def prod_by_city():
-    
-    return render_template("prod_by_city.html")
 
+    return render_template("prod_by_city.html")
 @app.route("/table_s")
-def sai():
-    
+def table():
+
     return render_template("sai_page.html")
 
 @app.route("/data")
 def data():
 
-    return render_template(
-        "sai_page.html",
-
-    )
+    return render_template("sai_page.html")
 
 
 if __name__ == "__main__":
