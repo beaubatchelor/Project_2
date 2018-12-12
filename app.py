@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, request 
 from flask_pymongo import PyMongo 
 from pymongo import MongoClient
-from data.config import (mongo_name, mongo_pass)
+from congfig import (mongo_name, mongo_pass)
 
 
 app = Flask(__name__)
@@ -46,4 +46,4 @@ def data():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
